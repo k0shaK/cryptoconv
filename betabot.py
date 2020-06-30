@@ -61,6 +61,7 @@ def echo_handler(update: Update, context: CallbackContext):
 
 
 def inline_handler(update: Update, context: CallbackContext):
+    users = []
     r = str(update.inline_query).split()[-3].replace("'", '').replace(',', '')
     if r not in users:
         users.append(r)
